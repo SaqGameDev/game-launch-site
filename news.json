@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "date": "2025-12-30",
+        "title": "Launch Day Protocols",
+        "excerpt": "Servers are now live. Download the client and begin your extraction."
+    },
+    {
+        "id": 2,
+        "date": "2025-12-28",
+        "title": "Weapon Balance Patch",
+        "excerpt": "We have adjusted the recoil on the AR-15 platform based on beta feedback."
+    }
+]

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OFFICIAL GAME LAUNCH</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="video-bg">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <nav class="glass-panel nav-bar">
+        <div class="logo">AMBER DECAY</div>
+        <div class="links">
+            <a href="#home">OPERATIONS</a>
+            <a href="#news">INTEL / NEWS</a>
+            <a href="#community">COMMUNITY</a>
+        </div>
+        <a href="assets/setup.exe" class="download-btn-small" download>INSTALL NOW</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="glass-card hero-content">
+            <h1>DEPLOY INTO CHAOS</h1>
+            <p>The ultimate offline extraction shooter. Survive. Loot. Extract.</p>
+            <div class="cta-group">
+                <a href="assets/setup.exe" class="main-cta" download>
+                    <i class="fa-brands fa-windows"></i> DOWNLOAD LAUNCHER (v1.0)
+                </a>
+                <span class="version-text">Req: Windows 10/11 | 64-bit</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="news-section">
+        <h2 class="section-title">FIELD REPORT (NEWS)</h2>
+        <div class="news-grid" id="news-feed">
+            <div class="loading-glass">Fetching Intel...</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
