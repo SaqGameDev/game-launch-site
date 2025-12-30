@@ -1,34 +1,45 @@
 :root {
-    --glass-bg: rgba(20, 20, 20, 0.6);
-    /* Dark semi-transparent */
-    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(20, 25, 30, 0.75);
+    /* Darker, stronger glass base */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.15);
     --neon-accent: #00ffcc;
-    /* A cyber/tactical green */
+    /* Cyber tactical green */
     --text-color: #ffffff;
 }
 
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* NEW: Tech/Sci-fi body font */
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 500;
     color: var(--text-color);
     background: #000;
     overflow-x: hidden;
 }
 
-/* Full Screen Video Background */
+/* --- NEW VIDEO BACKGROUND SYSTEM (The Fix) --- */
 .video-bg {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     z-index: -1;
     overflow: hidden;
+    /* Cuts off any overflow */
+    background: #000;
 }
 
 .video-bg video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
     min-width: 100%;
     min-height: 100%;
+    width: auto;
+    height: auto;
+    /* Centers video and crops edges instead of squishing */
+    transform: translate(-50%, -50%);
     object-fit: cover;
 }
 
@@ -38,19 +49,39 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    /* Darkens video */
+    background: rgba(0, 0, 0, 0.5);
+    /* Slightly darker for readability */
+    z-index: 1;
 }
 
-/* THE GLASS EFFECT UTILITY CLASS */
+/* --- ENHANCED GLASS VISUALS --- */
 .glass-panel,
 .glass-card {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    /* THE BLUR MAGIC */
-    -webkit-backdrop-filter: blur(12px);
+    /* Stronger Blur */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    /* 3D Glass Border Effect */
     border: var(--glass-border);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    /* Top highlight */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    /* Bottom shadow */
+
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.6);
+}
+
+/* --- TYPOGRAPHY UPDATES --- */
+h1,
+h2,
+h3,
+.logo,
+.main-cta {
+    /* Bold Military Header Font */
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 /* Navbar */
@@ -64,6 +95,18 @@ body {
     z-index: 100;
 }
 
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-bar a:hover {
+    color: var(--neon-accent);
+}
+
 /* Hero Section */
 .hero {
     height: 90vh;
@@ -74,29 +117,40 @@ body {
 }
 
 .hero-content {
-    padding: 3rem;
-    border-radius: 15px;
-    max-width: 600px;
+    padding: 4rem;
+    border-radius: 4px;
+    /* Sharper corners for military look */
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    /* Larger Title */
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
 }
 
 .main-cta {
     display: inline-block;
-    margin-top: 20px;
-    padding: 15px 40px;
+    margin-top: 30px;
+    padding: 15px 50px;
     background: var(--neon-accent);
     color: #000;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 900;
+    /* Extra bold */
     font-size: 1.2rem;
-    border-radius: 5px;
-    clip-path: polygon(10% 0, 100% 0, 100% 80%, 90% 100%, 0 100%, 0 20%);
-    /* Tactical Shape */
-    transition: transform 0.2s;
+    border-radius: 2px;
+    /* Tactical Angled Shape */
+    clip-path: polygon(10% 0, 100% 0, 100% 70%, 90% 100%, 0 100%, 0 30%);
+    transition: all 0.2s ease;
 }
 
 .main-cta:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px var(--neon-accent);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 0 25px var(--neon-accent);
+    background: #fff;
+    /* Flash white on hover */
 }
 
 /* News Grid */
@@ -109,25 +163,47 @@ body {
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .news-card {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 4px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Cool hover effect for news cards */
+.news-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--neon-accent);
+    opacity: 0;
     transition: 0.3s;
 }
 
 .news-card:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(20, 25, 30, 0.9);
     border-color: var(--neon-accent);
+    transform: translateY(-5px);
+}
+
+.news-card:hover::before {
+    opacity: 1;
 }
 
 .news-date {
     color: var(--neon-accent);
+    font-family: 'Orbitron', sans-serif;
     font-size: 0.8rem;
     display: block;
     margin-bottom: 10px;
+    letter-spacing: 1px;
 }

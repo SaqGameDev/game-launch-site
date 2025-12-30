@@ -4,9 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OFFICIAL GAME LAUNCH</title>
+    <title>AMBER DECAY - OFFICIAL LAUNCH</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,34 +27,48 @@
     </div>
 
     <nav class="glass-panel nav-bar">
-        <div class="logo">AMBER DECAY</div>
+        <div class="logo"><i class="fa-solid fa-biohazard"></i> AMBER DECAY</div>
         <div class="links">
             <a href="#home">OPERATIONS</a>
             <a href="#news">INTEL / NEWS</a>
             <a href="#community">COMMUNITY</a>
         </div>
-        <a href="assets/setup.exe" class="download-btn-small" download>INSTALL NOW</a>
+        <a href="assets/setup.exe" class="download-btn-small"
+            style="color: #00ffcc; text-decoration: none; font-weight: bold; border: 1px solid #00ffcc; padding: 5px 15px; border-radius: 2px;"
+            download>
+            INSTALL
+        </a>
     </nav>
 
     <section id="home" class="hero">
         <div class="glass-card hero-content">
             <h1>DEPLOY INTO CHAOS</h1>
-            <p>The ultimate offline extraction shooter. Survive. Loot. Extract.</p>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; color: #ccc;">
+                The ultimate offline extraction shooter. Survive. Loot. Extract.
+            </p>
+
             <div class="cta-group">
                 <a href="assets/setup.exe" class="main-cta" download>
                     <i class="fa-brands fa-windows"></i> DOWNLOAD LAUNCHER (v1.0)
                 </a>
-                <span class="version-text">Req: Windows 10/11 | 64-bit</span>
+
+                <div style="margin-top: 15px; font-size: 0.9rem; color: #888; font-family: 'Rajdhani', sans-serif;">
+                    <i class="fa-solid fa-microchip"></i> Req: Windows 10/11 | 64-bit
+                </div>
             </div>
         </div>
     </section>
 
     <section id="news" class="news-section">
-        <h2 class="section-title">FIELD REPORT (NEWS)</h2>
+        <h2 class="section-title"><i class="fa-solid fa-tower-broadcast"></i> FIELD REPORT (NEWS)</h2>
         <div class="news-grid" id="news-feed">
-            <div class="loading-glass">Fetching Intel...</div>
+            <div class="loading-glass" style="padding: 20px; text-align: center;">Fetching Intel...</div>
         </div>
     </section>
+
+    <footer style="text-align: center; padding: 2rem; color: #555; font-size: 0.8rem;">
+        &copy; 2025 MR SAQLAIN PRODUCTIONS. ALL RIGHTS RESERVED.
+    </footer>
 
     <script src="script.js"></script>
 </body>

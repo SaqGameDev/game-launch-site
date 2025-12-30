@@ -2,13 +2,19 @@
     {
         "id": 1,
         "date": "2025-12-30",
-        "title": "Launch Day Protocols",
-        "excerpt": "Servers are now live. Download the client and begin your extraction."
+        "title": "OPERATION: DEAD LION IS LIVE",
+        "excerpt": "All regional servers and offline client verifiers are now active. The extraction zone is open. Download the v1.0 installer immediately."
     },
     {
         "id": 2,
         "date": "2025-12-28",
-        "title": "Weapon Balance Patch",
-        "excerpt": "We have adjusted the recoil on the AR-15 platform based on beta feedback."
+        "title": "Tactical Update: Ballistics & Recoil",
+        "excerpt": "Patch 0.98 deploys adjustments to the AR-15 platform and sniper ballistics. Bullet drop physics have been recalibrated for extreme ranges."
+    },
+    {
+        "id": 3,
+        "date": "2025-12-25",
+        "title": "Dev Blog: The Offline Architecture",
+        "excerpt": "A deep dive into how Amber Decay handles persistent loot and extraction logic without a constant internet connection."
     }
 ]
